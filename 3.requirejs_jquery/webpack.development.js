@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const Webpack = require("webpack");
 module.exports = {
     mode:"development",
     entry:{
@@ -10,28 +10,25 @@ module.exports = {
         path:path.resolve(path.join(__dirname,"./dist"))
     },
     resolve:{
+        modules:[
+            path.resolve(path.join(__dirname,"./node_modules"))
+        ],
         alias:{
             "jquery":path.resolve(path.join(__dirname,"./node_modules/jquery/dist/jquery.min.js")),
-            "bootstrap":path.resolve(path.join(__dirname,"./node_modules/bootstrap/dist/js/bootstrap.min.js")),
-            "$":"jquery"
+            "bootstrap":path.resolve(path.join(__dirname,"./node_modules/bootstrap/dist/js/bootstrap.min"))
         }
     },
     module:{
-        rules:[
-            {
-                test:/jquery/,
-                loader:'exports?jquery',   
-            },
-            {
-                test:/bootstrap/,
-                loader:'imports?jquery'   
-            }
-        ]  
+        rules:[]  
     },
     plugins:[
         new HtmlWebpackPlugin({
-            inject:false,
-            template:"./src/index.html"
+            template:"./src/index2.html"
+        }),
+        new Webpack.ProvidePlugin({
+            "jquery":"jquery",
+            "jQuery":"jquery",
+            "window.$":"jquery"
         })
     ]
 }

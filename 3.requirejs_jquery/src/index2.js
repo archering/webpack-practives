@@ -1,4 +1,4 @@
- define(["./main"],function(){
+//define(["./main"],function(){
 
     require(['jquery','bootstrap'],function($){
         
@@ -13,4 +13,4 @@
 
     });
 
- });
+ //});

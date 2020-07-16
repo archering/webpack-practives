@@ -1,0 +1,12 @@
+/** from zd***/  
+html{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+/** from zd***/  
+html,body{
+    width: 100%;
+    height: 100%;
+}

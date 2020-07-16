@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <div class="header"></div>
+  <div class="body">
+    <div class="left-menu">
+      <a ui-sref="home" ui-sref-active="active" class="menu-item">Home</a>
+      <a ui-sref="about" ui-sref-active="active" class="menu-item">About</a>
+      <a ui-sref="view" ui-sref-active="active" class="menu-item">View</a>
+    </div>
+    <div class="content">
+      <ui-view></ui-view>
+    </div>
+  </div>
+  
+<script src="index.js"></script></body>
+</html>

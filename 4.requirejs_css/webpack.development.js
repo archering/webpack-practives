@@ -22,13 +22,35 @@ module.exports = {
     module:{
         rules:[
             {
-                test:""
+                test:/\.css$/,
+                use:[
+                    {
+                        loader:"style-loader"
+                    },
+                    {
+                        loader:"css-loader"
+                    }
+                ]
+            },
+            {
+                test:/\.(eot|woff|woff2|ttf|svg)$/,
+                use:[
+                    {
+                        loader:"file-loader"
+                    },{
+                        loader:"url-loader", //A loader for webpack which transforms files into base64 URIs
+                        options:{
+                            limit: 1024,
+                        }
+                    }
+                ]
             }
         ]  
     },
     plugins:[
         new HtmlWebpackPlugin({
-            template:"./src/index2.html"
+            template:"./src/index2.html",
+            filename:"index2.html"
         }),
         new Webpack.ProvidePlugin({
             "jquery":"jquery",

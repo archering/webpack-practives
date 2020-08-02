@@ -10,6 +10,14 @@ module.exports = {
     output:{
         "path":path.resolve(path.join(__dirname,"./dist"))
     },
+    resolve:{
+        modules:[
+            path.resolve(path.join(__dirname,"./node_modules"))
+        ],
+        alias:{
+            "jquery":path.resolve(path.join(__dirname,"./node_modules/jquery/dist/jquery.min.js"))
+        }
+    },
     module:{
         rules:[
             { test: /\.js$/, 
@@ -56,6 +64,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
-        new BundleAnalyzerPlugin()
+        //new BundleAnalyzerPlugin()
     ]
 }

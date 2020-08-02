@@ -24,6 +24,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hel
 
 /***/ }),
 
+/***/ "./src/click.js":
+/*!**********************!*\
+  !*** ./src/click.js ***!
+  \**********************/
+/*! exports provided: deal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"deal\", function() { return deal; });\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/.pnpm/jquery@3.5.1/node_modules/jquery/dist/jquery.min.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction deal() {\n  var btn = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"#clickme\");\n  btn.on(\"click\", function () {\n    alert(\"hello wrold\");\n  });\n}\n\n\n\n//# sourceURL=webpack:///./src/click.js?");
+
+/***/ }),
+
 /***/ "./src/help.js":
 /*!*********************!*\
   !*** ./src/help.js ***!
@@ -44,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./a */ \"./src/a.js\");\n/* harmony import */ var _b__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./b */ \"./src/b.js\");\n\n\nwindow.addEventListener(\"load\", function () {\n  var add = document.getElementById(\"hello\");\n  var minus = document.getElementById(\"alo\");\n  add.innerHTML = \"1 + 2 = \".concat(new _a__WEBPACK_IMPORTED_MODULE_0__[\"Math\"]().calcTwo(1, 2));\n  Object(_b__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(\"通过引用计算 1 + 2的值\");\n  minus.innerHTML = \"10 - 9 = \".concat(new _a__WEBPACK_IMPORTED_MODULE_0__[\"Math\"]().calcMinus(10, 9));\n  Object(_b__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(\"通过引用计算 10 - 9的值\");\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./a */ \"./src/a.js\");\n/* harmony import */ var _b__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./b */ \"./src/b.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ \"./node_modules/.pnpm/jquery@3.5.1/node_modules/jquery/dist/jquery.min.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _click__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./click */ \"./src/click.js\");\n\n\n\n // window.addEventListener(\"load\",function(){\n//     let add = document.getElementById(\"hello\");\n//     let minus = document.getElementById(\"alo\");\n//     add.innerHTML = `1 + 2 = ${new Math().calcTwo(1,2)}`\n//     log(\"通过引用计算 1 + 2的值\");\n//     minus.innerHTML = `10 - 9 = ${new Math().calcMinus(10,9)}`\n//     log(\"通过引用计算 10 - 9的值\");\n// });\n\njquery__WEBPACK_IMPORTED_MODULE_2___default()(function () {\n  var add = document.getElementById(\"hello\");\n  var minus = document.getElementById(\"alo\");\n  add.innerHTML = \"1 + 2 = \".concat(new _a__WEBPACK_IMPORTED_MODULE_0__[\"Math\"]().calcTwo(1, 2));\n  Object(_b__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(\"通过引用计算 1 + 2的值\");\n  minus.innerHTML = \"10 - 9 = \".concat(new _a__WEBPACK_IMPORTED_MODULE_0__[\"Math\"]().calcMinus(10, 9));\n  Object(_b__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(\"通过引用计算 10 - 9的值\");\n  Object(_click__WEBPACK_IMPORTED_MODULE_3__[\"deal\"])();\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

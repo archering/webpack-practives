@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 let BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     mode:"development",
     entry:{
@@ -31,7 +32,9 @@ module.exports = {
         ]
     },
     optimization:{//打包优化策略
-    
+        // minimizer:[// production 模式下不需要，自然会对分割出来的包进行压缩
+        //     new UglifyJsPlugin()
+        // ],
         splitChunks:{// 分包方案
             chunks:"all", // 去所有的包里搜索，搜索范围   initial、async、all
             cacheGroups:{
